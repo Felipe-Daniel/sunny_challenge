@@ -8,25 +8,133 @@ body,html{
 }
 body{
     margin: 0;
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    background: #fefbf9;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1,div{
+    margin: 0;
 }
 
 /*---> FlexBox <---*/
-body,main{
+body,main,header,nav,.client{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: stretch;
+}
+header,nav{
+    flex-wrap: nowrap;
 }
 header,footer,.introduction{
     flex: 1 1 100%;
 }
 .block, .image-block{
-    padding: 2%;
     flex: 0 0 50%;
+    height: 500px;
+    padding: 2% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.image-block{
+    align-content: flex-end;
+}
+.image-block > div{
+    text-align: center;
+}
+.block > div,.image-block > div{
+    padding: 20px;
 }
 main h3{
     text-align: center;
     flex: 0 0 100%;
+    margin: 0;
+}
+.client{
+    padding: 10%;
+}
+.client-title{
+    margin-bottom: 100px;
+    flex: 1 0 100%;
 }
 .client-block{
     flex:0 0 33%;
+}
+
+/* Colors */
+header,.introduction{
+    background: #3cbfff;
+    color: white;
+}
+.image-block:nth-child(3){
+    background-image: url(./images/desktop/image-stand-out.jpg);
+    background-size: 100% 100%;
+}
+.image-block:nth-child(4){
+    background-image: url(./images/desktop/image-transform.jpg);
+    background-size: 100% 100%;
+}
+.image-block:nth-child(6){
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-size: 100% 100%;
+}
+.image-block:nth-child(7){
+    background-image: url(./images/desktop/image-photography.jpg);
+    background-size: 100% 100%;
+}
+.block-title{
+    color: #212d3c;
+    font-size: 2.4em;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+}
+.image-block-title{
+    color: #215246;
+    font-size: 2em;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+}
+ .block > a{
+    color: #212d3c;
+    text-transform: uppercase;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+}
+.block > a::after{
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: -10%;
+    content: '';
+    width: 120%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: hsl(7, 99%, 70%);
+    opacity: 0.4;
+}
+.block-text{
+    color: #85808e;
+}
+.image-block-title, .image-block-text{
+    color: #215246;
+}
+.client-title{
+    font-family: 'Fraunces', sans-serif;
+    text-align: center;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: #85808e;
+    font-weight: 600;
 }
