@@ -68,7 +68,32 @@ main h3{
     flex: 1 0 100%;
 }
 .client-block{
-    flex:0 0 33%;
+    flex:1 0 28%;
+    margin-right: 2%;
+}
+.client-block:last-child{
+    margin-right: 0
+}
+.client img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+}
+.client-commentary{
+    margin: 50px 0;
+    color: #85808e;
+}
+.client-name{
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.client-profession{
+    font-size: 0.8;
+    color: #b5b2b8;
 }
 
 /* Colors */
@@ -137,4 +162,7 @@ header,.introduction{
     text-transform: uppercase;
     color: #85808e;
     font-weight: 600;
+}
+.client-block > div{
+    text-align: center;
 }
