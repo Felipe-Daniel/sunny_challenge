@@ -23,8 +23,9 @@ h1,div{
     margin: 0;
 }
 
-/*---> FlexBox <---*/
-body,main,header,nav,.client{
+/*---> Posicioning <---*/
+
+body,main,header,nav,.client,footer,.bottom-images{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -33,7 +34,8 @@ body,main,header,nav,.client{
 header,nav{
     flex-wrap: nowrap;
 }
-header,footer,.introduction{
+
+header,footer,.introduction,.bottom-images{
     flex: 1 1 100%;
 }
 .block, .image-block{
@@ -95,25 +97,56 @@ main h3{
     font-size: 0.8;
     color: #b5b2b8;
 }
+.image{
+    flex: 1 0 25%;
+    height: 350px;
+    background-size: 100% 100%;
+}
+footer{
+    padding: 50px;
+}
+footer svg{
+    display: block;
+    margin: 0 auto;
+    
+}
+footer svg path{
+    background-color: #2a7263;
+}
+footer ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer li{
+    color: #2a7263;;
+    flex: 0 1 5%;
+    margin: 0 20px;
+}
 
-/* Colors */
-header,.introduction{
-    background: #3cbfff;
+
+/* Decoration */
+
+header, .introduction{
+    background-image: url(./images/desktop/image-header.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     color: white;
 }
-.image-block:nth-child(3){
+.image-block:nth-child(2){
     background-image: url(./images/desktop/image-stand-out.jpg);
     background-size: 100% 100%;
 }
-.image-block:nth-child(4){
+.image-block:nth-child(3){
     background-image: url(./images/desktop/image-transform.jpg);
     background-size: 100% 100%;
 }
-.image-block:nth-child(6){
+.image-block:nth-child(5){
     background-image: url(./images/desktop/image-graphic-design.jpg);
     background-size: 100% 100%;
 }
-.image-block:nth-child(7){
+.image-block:nth-child(6){
     background-image: url(./images/desktop/image-photography.jpg);
     background-size: 100% 100%;
 }
@@ -165,4 +198,22 @@ header,.introduction{
 }
 .client-block > div{
     text-align: center;
+}
+.bottom-images > .image:nth-child(1){
+    background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+}
+.bottom-images > .image:nth-child(2){
+    background-image: url(./images/desktop/image-gallery-orange.jpg);
+}
+.bottom-images > .image:nth-child(3){
+    background-image: url(./images/desktop/image-gallery-cone.jpg);
+}
+.bottom-images > .image:nth-child(4){
+    background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+}
+footer,.attribution{
+    background: #91d4c4;
+}
+.attribution{
+    flex: 1 0 100%
 }
