@@ -13,6 +13,9 @@ body{
     font-weight: 600;
     background: #fefbf9;
 }
+ul{
+    padding: 0;
+}
 li{
     list-style: none;
 }
@@ -25,15 +28,69 @@ h1,div{
 
 /*---> Posicioning <---*/
 
-body,main,header,nav,.client,footer,.bottom-images{
+body,main,header,.client,footer,.bottom-images{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
 }
-header,nav{
-    flex-wrap: nowrap;
+header{
+    padding-top: 20px;
 }
+.logo{
+    width: 15%;;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+    .logo svg{
+        vertical-align: middle;
+    }
+nav{
+    height: 100px;
+    display: inline-block;
+    width: 85%;
+}
+    nav ul{
+        display: inline-block;
+        width: 100%;
+        text-align: end;
+    }
+        nav ul li{
+            display: inline;
+            margin: 0 2%;
+            height: 100px;
+        }
+            nav ul li a{
+                color: white;
+            }
+            nav ul li a:hover{
+                color: #e6e6e6;
+            }
+
+            nav ul li:last-child a{
+                color: #333;
+                background: white;
+                border-radius: 20px;
+                padding: 10px 40px;;
+                font-family: "Fraunces", Arial, Helvetica, sans-serif;
+                font-weight: 900;
+            }
+            nav ul li:last-child a:hover{
+                background:#e6e6e6;
+                color: #333;
+            }
+
+.introduction{
+    font-family: "Fraunces", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 500px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
 
 header,footer,.introduction,.bottom-images{
     flex: 1 1 100%;
@@ -51,9 +108,9 @@ header,footer,.introduction,.bottom-images{
 .image-block{
     align-content: flex-end;
 }
-.image-block > div{
-    text-align: center;
-}
+    .image-block > div{
+        text-align: center;
+    }
 .block > div,.image-block > div{
     padding: 20px;
 }
@@ -108,6 +165,7 @@ footer{
 footer svg{
     display: block;
     margin: 0 auto;
+    margin-bottom: 30px;
     
 }
 footer svg path{
@@ -120,15 +178,16 @@ footer ul{
     align-items: center;
 }
 footer li{
-    color: #2a7263;;
-    flex: 0 1 5%;
+    flex: 0 1 7%;
     margin: 0 20px;
 }
-
+footer ul li a{
+    color: #2a7263;;
+}
 
 /* Decoration */
 
-header, .introduction{
+header{
     background-image: url(./images/desktop/image-header.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
