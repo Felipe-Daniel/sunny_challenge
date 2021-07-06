@@ -85,12 +85,13 @@ nav ul{
     margin-bottom: 160px;
     text-transform: uppercase;
     letter-spacing: 8px;
+    padding: 0 2%;
 }
 header img{
     display: block;
     margin: 0 auto;
     font-size: 1em;
-    margin-bottom: 340px;
+    margin-bottom: 20%;
 }
 
 
@@ -125,10 +126,11 @@ main h3{
     padding: 10%;
 }
 .client-title{
-    margin-bottom: 100px;
+
     flex: 1 0 100%;
 }
 .client-block{
+    margin-top: 100px;
     flex:1 0 28%;
     margin-right: 2%;
 }
@@ -143,7 +145,7 @@ main h3{
     height: 70px;
 }
 .client-commentary{
-    margin: 50px 0;
+    margin: 50px 0 20px 0;
     color: #85808e;
 }
 .client-name{
